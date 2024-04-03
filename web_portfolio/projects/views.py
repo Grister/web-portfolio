@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 
-from web_portfolio.projects.models import Project
+from projects.models import Project
 
 
 # Create your views here.
