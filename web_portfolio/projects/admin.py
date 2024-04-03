@@ -1,3 +1,12 @@
 from django.contrib import admin
+from .models import Project, Skill
 
-# Register your models here.
+
+@admin.register(Project)
+class ProductModelAdmin(admin.ModelAdmin):
+    ...
+
+
+@admin.register(Skill)
+class ProductModelAdmin(admin.ModelAdmin):
+    ...
