@@ -17,18 +17,21 @@
     font-size: 55px;
     color: #808080;
     margin: inherit;
+    text-align: left;
 }
 
 .position {
     font-size: 55px;
     color: #0D0D0D;
     font-weight: bold;
+    text-align: left;
 }
 
 .description {
     font-size: 15px;
     color: #808080;
     width: 550px;
+    text-align: left;
 }
 
 .button-container {

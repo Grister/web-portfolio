@@ -1,11 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     background-image: url("D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/images/main-page-LightV.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -14,71 +12,65 @@ body {
 .container-center-horizontal {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding-top: 4%;
 }
 
 .navbar {
     background-color: #ffffff25;
-    height: 50px;
-    width: 1030px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
+    margin: 1% 5%;
     border-radius: 36px;
     border: 2px solid #ffffff25;
+    width: 80%;
+    height: 55px;
+    max-width: 1200px;
 }
 
 .text-navbar {
     display: flex;
-    flex-direction: row;
     font-family: "Inter";
     font-weight: bold;
-    font-size: 15px;
+    font-size: 17px;
+    align-items: center;
 }
 
 #g-logo {
-    margin-left: 10%;
-    font-size: 35px;
+    font-size: 35px; 
+    margin-left: 20px;
 }
 
 .navbar-element {
-    margin: 10%;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: 0 20px;
     min-width: fit-content;
 }
 
 .sidebar {
     display: flex;
-    flex-direction: row;
-    width: 15%;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .sidebar-element {
-    margin: 10%;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: 0 15px;
+    width: 30%;
 }
 
 .separator {
-    height: 70%;
-    margin-bottom: auto;
-    margin-top: auto;
+    height: 30px;
 }
 
 .main-content {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 7%;
+    margin: 0 5% 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-direction: row;
-    height: 530px;
+    width: 80%;
+    max-width: 1200px;
+    min-height: 600px;
 }
 
 .button-container {
@@ -88,24 +80,22 @@ body {
 
 .footer-light {
     background-color: #ffffff;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .footer-box {
     display: flex;
     flex-direction: row;
-    margin: 1%;
-    margin-left: 15%;
-    margin-right: 15%;
+    align-items: center;
+    margin: 0% 10%;
 }
 
 .footer-text {
     font-family: Inter;
     font-size: 15px;
     color: #808080;
-    margin-right: 10%;
-    margin-left: 10%;
-    display: flex;
-    align-items: center;
+    margin: 0 10%;
     text-align: center;
 }
 
@@ -113,6 +103,8 @@ body {
     font-family: Inter;
     font-size: 35px;
     font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .copyright {
@@ -124,14 +116,15 @@ body {
 
 .footer-links {
     display: flex;
-    flex-direction: row;
-    align-content: center;
     justify-content: center;
-    align-items: center;
 }
 
 .footer-link {
-    margin: 5%;
+    margin: 0 10px;
     width: 25px;
     height: 25px;
+}
+
+.telegram {
+    height: 22px;
 }
