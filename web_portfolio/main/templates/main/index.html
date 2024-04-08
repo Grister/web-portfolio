@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="main-text">
+        <h1 class="title">Zakhar Kravchenko</h1>
+        <div class="position">Python Backend Developer</div>
+    </div>
+    <p class="description">
+        A junior Backend developer who wants to bring ideas to life through code, ensuring they seamlessly integrate
+        into the digital landscape.
+        I specialize in web application development with Python and its frameworks.
+    </p>
+
+    <div class="button-contact-me">
+        <div class="contact-me-text">Contact me</div>
+        <img class="telegram-icon"
+             src="{% static 'icons/telegram.svg' %}"
+             alt="telegram">
+    </div>
+    <div class="button-cv">
+        <div class="cv-link">Download my CV</div>
+    </div>
+
+    <img class="photo-qmAAg5"
+         src="{% static 'icons/coder.png' %}"
+         alt="photo">
+
+{% endblock %}

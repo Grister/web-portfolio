@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-image: url("D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/images/main-page-LightV.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4%;
+}
+
+.navbar {
+    background-color: #ffffff25;
+    height: 50px;
+    width: 1030px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border-radius: 36px;
+    border: 2px solid #ffffff25;
+}
+
+.text-navbar {
+    display: flex;
+    flex-direction: row;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#g-logo {
+    margin-left: 10%;
+    font-size: 35px;
+}
+
+.navbar-element {
+    margin: 10%;
+    margin-bottom: auto;
+    margin-top: auto;
+    min-width: fit-content;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    justify-content: flex-end;
+}
+
+.sidebar-element {
+    margin: 10%;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.separator {
+    height: 70%;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.main-content {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 530px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-light {
+    background-color: #ffffff;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.footer-text {
+    font-family: Inter;
+    font-size: 15px;
+    color: #808080;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.grist-logo {
+    font-family: Inter;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.copyright {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: lighter;
+    width: max-content;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link {
+    margin: 5%;
+    width: 25px;
+    height: 25px;
+}
