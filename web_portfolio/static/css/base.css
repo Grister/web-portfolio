@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
 body {
     background-image: url("D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/images/main-page-LightV.png");
     background-repeat: no-repeat;
@@ -37,13 +38,34 @@ body {
 }
 
 #g-logo {
-    font-size: 35px; 
+    font-size: 35px;
     margin-left: 20px;
 }
 
 .navbar-element {
     margin: 0 20px;
     min-width: fit-content;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-element {
+    position: relative;
+}
+
+.text-navbar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -35%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0d0d0d;
+    border-radius: 5px;
+}
+
+.text-navbar a:hover:not(.active) {
+    color: #808080;
 }
 
 .sidebar {
@@ -54,13 +76,82 @@ body {
 
 .sidebar-element {
     margin: 0 15px;
-    width: 30%;
 }
 
 .separator {
     height: 30px;
 }
 
+#github {
+    width: 35px;
+}
+
+
+/* Theme switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 50%;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid black;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto -1px;
+    transition: 0.4s;
+    border: 2px solid #000000;
+}
+
+input:checked+.slider {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    border: 2px solid #ffffff;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Main block */
 .main-content {
     margin: 0 5% 0;
     display: flex;
@@ -119,7 +210,7 @@ body {
     justify-content: center;
 }
 
-.footer-link {
+.footer-icon {
     margin: 0 10px;
     width: 25px;
     height: 25px;
