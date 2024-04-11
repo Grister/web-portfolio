@@ -11,46 +11,45 @@
             <h1 class="title">My Projects</h1>
 
             <div class="main-block">
-
+                {% for card in projects %}
                 <div class="card">
                     <div class="card-body">
                         <div class="card-top-side">
-                            <a href="#" class="card-title">
-                                <p>project-name</p>
+                            <a href="{{ card.link }}" class="card-title">
+                                <p>{{ card.title }}</p>
                             </a>
                             <ul class="side-skills">
+                                {% for skill in card.skills.all %}
                                 <li class="skill-item">
                                     <a class="skill-link" href="#">
                                         <img class="skill-img"
-                                            src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/media/side_skills/python.png"
-                                            alt="Light switch">
+                                            src="{{ skill.image.url }}"
+                                            alt="{{ skill.name }}">
                                     </a>
                                 </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <p class="card-description">
-                            Lorem ipsum dolor sit amet consectetur. Eget leo rutrum urna placerat.
-                            Amet facilisi varius sit viverra sit. Risus vulputate posuere ac urna
-                            cursus adipiscing. Elit nulla nulla ultrices ullamcorper ornare.
+                            {{ card.description }}
                         </p>
                     </div>
                     <img class="card-image"
-                        src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/media/project_images/default.png"
+                        src="{{ card.image.url }}"
                         alt="card-image">
                 </div>
-
+                {% endfor %}
             </div>
+            {% if is_paginated %}
             <nav class="pagination">
                 <div class="pagination-content">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a class="active" href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
+                    <a href="{% if page_obj.has_previous %} {% url 'projects:paginator' page_obj.previous_page_number %} {% else %} # {% endif %}">&laquo;</a>
+                    {% for page in page_obj.paginator.page_range %}
+                    <a href="{% url 'projects:paginator' page %}">{{ page }}</a>
+                    {% endfor %}
+                    <a href="{% if page_obj.has_next %} {% url 'projects:paginator' page_obj.next_page_number %} {% else %} # {% endif %}">&raquo;</a>
                 </div>
             </nav>
+            {% endif %}
 
   {% endblock %}
