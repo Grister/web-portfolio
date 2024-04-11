@@ -1,8 +1,8 @@
-<!-- {% load static %} -->
+{% load static %}
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-light">
 
 <head>
     <meta charset="utf-8">
@@ -10,10 +10,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Main page</title>
+    <title>{{ title }}</title>
 
-    <link href="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/css/base.css" rel="stylesheet">
-    <link href="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/css/main-page.css" rel="stylesheet">
+    <link href="{% static '/css/base.css' %}" rel="stylesheet">
+    {% block css %} {% endblock %}
 </head>
 
 
@@ -24,62 +24,42 @@
         <!-- {#        --------------Navbar flare--------------------------#} -->
         <div class="navbar">
             <div class="text-navbar">
-                <div class="navbar-element" id="g-logo">
+                <a href="{% url 'main:index' %}" class="navbar-element" id="g-logo">
                     [g]
-                </div>
-                <div class="navbar-element" id="main-page">
+                </a>
+                <a href="{% url 'main:short_index' %}" class="navbar-element" id="main-page">
                     Main page
-                </div>
-                <div class="navbar-element" id="projects">
+                </a>
+                <a href="{% url 'projects:project-list' %}" class="navbar-element" id="projects">
                     Projects
-                </div>
-                <div class="navbar-element" id="contacts">
+                </a>
+                <a href="{% url 'contacts:contacts' %}" class="navbar-element" id="contacts">
                     Contacts
-                </div>
+                </a>
             </div>
             <div class="sidebar">
-                <img id="github" class="sidebar-element"
-                    src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/github.svg"
-                    alt="github">
+                <a href="https://github.com/Grister/web-portfolio" class="sidebar-element">
+                    <img id="github"
+                        src="{% static '/icons/github-footer_dark.svg' %}"
+                        alt="github">
+                </a>
                 <img id="separator" class="separator"
-                    src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/séparateur.png"
+                    src="{% static '/icons/séparateur.png' %}"
                     alt="separator">
-                <img id="light-switch" class="sidebar-element"
-                    src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/light_switch_dark.svg"
-                    alt="Light switch">
+                <label id="theme-switch" class="switch sidebar-element">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+                </label>
             </div>
         </div>
 
         <!-- {#        --------------Main section--------------------------#} -->
         <div class="main-content">
-            <div class="main-text">
-                <h1 class="title">Zakhar Kravchenko</h1>
-                <div class="position">Python Backend Developer</div>
-                <p class="description">
-                    A junior Backend developer who wants to bring ideas to life through code, ensuring they seamlessly
-                    integrate
-                    into the digital landscape.
-                    I specialize in web application development with Python and its frameworks.
-                </p>
-                <div class="button-container">
-                    <div class="cv-button button">
-                        <div class="cv-link">Download my CV</div>
-                    </div>
-                    <div class=" contact-me-button button">
-                        <div class="contact-me-text">Contact me</div>
-                        <img class="telegram-icon-contact"
-                            src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/telegram.svg"
-                            alt="telegram">
-                    </div>
-                </div>
-            </div>
-            <img class="photo-profile"
-                src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/coder.png"
-                alt="photo">
+            {% block content %} {% endblock %}
         </div>
 
         <!-- {#        --------------Footer section--------------------------#} -->
-        <div class="footer-light">
+        <div class="footer">
             <div class="footer-box">
                 <div class="footer-logo-box">
                     <div class="grist-logo">[g]rist</div>
@@ -91,30 +71,36 @@
                     </div>
                 </div>
                 <p class="footer-text">
-                    Lorem ipsum dolor sit amet consectetur. Mauris
-                    scelerisque magna lorem dictumst. Eget pulvinar laoreet in quis bibendum.
-                    Sodales sem praesent diam rutrum id. Consequat laoreet ultrices sit enim ultrices nunc.
+                    Welcome to my personal website! Here you will find information about me,
+                    my projects and contact information to get in touch with me.
+                    You can also check out my portfolio and view my projects on GitHub.
+                    I look forward to hearing from you!
                 </p>
 
                 <div class="footer-links">
-                    <img class="mail footer-link"
-                        src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/mail_dark.svg"
-                        alt="mail">
-                    <img class="telegram footer-link"
-                        src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/telegram.svg"
-                        alt="telegram">
-                        <img class="github footer-link"
-                        src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/github.svg"
-                        alt="Github">
-
-                    <img class="linkedin footer-link"
-                        src="D:/dev%20staff/python/P-ject%20python/Django-projects/web-cv/web_portfolio/static/icons/linkedin_dark.svg"
-                        alt="linkedin">
+                    <a href="mailto:example@example.com" class="footer-link">
+                        <img id="mail-footer" class="mail footer-icon"
+                            src=""
+                            alt="mail"></a>
+                    <a href="https://t.me/lewiscarroll" class="footer-link">
+                        <img id="telegram-footer" class="telegram footer-icon"
+                            src=""
+                            alt="telegram"></a>
+                    <a href="https://github.com/Grister/" class="footer-link">
+                        <img id="github-footer" class="github footer-icon"
+                            src=""
+                            alt="Github"></a>
+                    <a href="https://www.linkedin.com/in/grister/" class="footer-link">
+                        <img id="linkedin-footer" class="linkedin footer-icon"
+                            src=""
+                            alt="linkedin">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-
+    <script src="{% static '/js/theme-switch.js' %}"></script>
+    <script src="{% static '/js/links-settings.js' %}"></script>
 </body>
 
 </html>

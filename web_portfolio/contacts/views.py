@@ -1,7 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import TemplateView
 
 
 # Create your views here.
-class UserListAPIView(ListView):
-    pass
+class ContactsView(TemplateView):
+    template_name = 'contacts/contacts.html'
+    title = "Contact me"

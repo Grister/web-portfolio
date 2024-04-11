@@ -3,5 +3,6 @@ from django.views.generic import TemplateView
 
 
 # Create your views here.
-class UserListAPIView(TemplateView):
+class IndexView(TemplateView):
     template_name = 'main/index.html'
+    title = "Main page"

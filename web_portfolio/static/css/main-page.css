@@ -22,7 +22,7 @@
 
 .position {
     font-size: 55px;
-    color: #0D0D0D;
+    color: var(--footer-logo-color);
     font-weight: bold;
     text-align: left;
 }
@@ -52,15 +52,20 @@
 }
 
 .button {
-    width: 160px;
     display: flex;
-    height: 44px;
     justify-content: center;
     align-items: center;
+    width: 160px;
+    height: 44px;
     border-radius: 10px;
     margin-right: 2%;
     margin-left: 2%;
-    box-shadow: 18px 18px 30px #D1D9E6;
+    box-shadow: var(--card-shadow-set);
+    text-decoration: none;
+}
+
+.button:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .telegram-icon-contact {

@@ -8,10 +8,6 @@ from projects.models import Project
 class ProjectListView(ListView):
     model = Project
     context_object_name = 'projects'
-    template_name = 'products/products.html'
-    paginate_by = 3
+    template_name = 'projects/projects.html'
+    paginate_by = 4
 
-
-# class IndexView(TitleMixin, TemplateView):
-#     template_name = 'products/index.html'
-#     title = 'Store'

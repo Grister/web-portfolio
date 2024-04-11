@@ -2,30 +2,34 @@
 
 {% load static %}
 
+{% block css %}
+    <link href="{% static '/css/main-page.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 
     <div class="main-text">
         <h1 class="title">Zakhar Kravchenko</h1>
         <div class="position">Python Backend Developer</div>
+        <p class="description">
+            A junior Backend developer who wants to bring ideas to life through code, ensuring they seamlessly
+            integrate into the digital landscape.
+            I specialize in web application development with Python and its frameworks.
+        </p>
+        <div class="button-container">
+            <a href="#" class="cv-button button">
+                <div class="cv-link">Download my CV</div>
+            </a>
+            <a href="#" class=" contact-me-button button">
+                <div class="contact-me-text">Contact me</div>
+                <img class="telegram-icon-contact"
+                     src="{% static '/icons/telegram-footer_dark.svg' %}"
+                     alt="telegram">
+            </a>
+        </div>
     </div>
-    <p class="description">
-        A junior Backend developer who wants to bring ideas to life through code, ensuring they seamlessly integrate
-        into the digital landscape.
-        I specialize in web application development with Python and its frameworks.
-    </p>
-
-    <div class="button-contact-me">
-        <div class="contact-me-text">Contact me</div>
-        <img class="telegram-icon"
-             src="{% static 'icons/telegram.svg' %}"
-             alt="telegram">
-    </div>
-    <div class="button-cv">
-        <div class="cv-link">Download my CV</div>
-    </div>
-
-    <img class="photo-qmAAg5"
-         src="{% static 'icons/coder.png' %}"
+    <img class="photo-profile"
+         src="{% static '/icons/coder.png' %}"
          alt="photo">
 
 {% endblock %}
