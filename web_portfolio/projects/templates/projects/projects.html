@@ -45,7 +45,11 @@
                 <div class="pagination-content">
                     <a href="{% if page_obj.has_previous %} {% url 'projects:paginator' page_obj.previous_page_number %} {% else %} # {% endif %}">&laquo;</a>
                     {% for page in page_obj.paginator.page_range %}
-                    <a href="{% url 'projects:paginator' page %}">{{ page }}</a>
+                        {% if page == page_obj.number %}
+                            <a href="{% url 'projects:paginator' page %}" class="active">{{ page }}</a>
+                        {% else %}
+                            <a href="{% url 'projects:paginator' page %}">{{ page }}</a>
+                        {% endif %}
                     {% endfor %}
                     <a href="{% if page_obj.has_next %} {% url 'projects:paginator' page_obj.next_page_number %} {% else %} # {% endif %}">&raquo;</a>
                 </div>

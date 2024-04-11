@@ -5,6 +5,11 @@
     --footer-color: #ffffff;
     --footer-logo-color: #000000;
     --card-shadow-set: 18px 18px 30px #d1d9e6a3;
+    --footer-text-color: #000000;
+    --pagination-text: black;
+    --pagination-hover: #ddd;
+    --pagination-active: white;
+    --pagination-active-bg: #333333;
 }
 
 body {
@@ -208,10 +213,10 @@ input:checked+.slider:before {
 }
 
 .copyright {
-    font-family: Roboto;
+    font-family: Inter;
     font-size: 12px;
-    font-weight: lighter;
     width: max-content;
+    color: var(--footer-text-color)
 }
 
 .footer-links {
