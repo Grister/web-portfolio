@@ -11,6 +11,10 @@
     <meta name="author" content="">
 
     <title>{{ title }}</title>
+    <script>
+        const staticURL = "{% static '/icons' %}" + "/";
+    </script>
+
 
     <link href="{% static '/css/base.css' %}" rel="stylesheet">
     {% block css %} {% endblock %}
@@ -19,88 +23,88 @@
 
 <body>
 
-    <div class="container-center-horizontal">
+<div class="container-center-horizontal">
 
-        <!-- {#        --------------Navbar flare--------------------------#} -->
-        <div class="navbar">
-            <div class="text-navbar">
-                <a href="{% url 'main:index' %}" class="navbar-element" id="g-logo">
-                    [g]
-                </a>
-                <a href="{% url 'main:short_index' %}" class="navbar-element" id="main-page">
-                    Main page
-                </a>
-                <a href="{% url 'projects:project-list' %}" class="navbar-element" id="projects">
-                    Projects
-                </a>
-                <a href="{% url 'contacts:contacts' %}" class="navbar-element" id="contacts">
-                    Contacts
-                </a>
-            </div>
-            <div class="sidebar">
-                <a href="https://github.com/Grister/web-portfolio" class="sidebar-element">
-                    <img id="github"
-                        src="{% static '/icons/github-footer_dark.svg' %}"
-                        alt="github">
-                </a>
-                <img id="separator" class="separator"
-                    src="{% static '/icons/séparateur.png' %}"
-                    alt="separator">
-                <label id="theme-switch" class="switch sidebar-element">
-                    <input type="checkbox" onchange="toggleTheme()" id="slider">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+    <!-- {#        --------------Navbar flare--------------------------#} -->
+    <div class="navbar">
+        <div class="text-navbar">
+            <a href="{% url 'main:index' %}" id="g-logo">
+                [g]
+            </a>
+            <a href="{% url 'main:short_index' %}" class="navbar-element" id="main-page">
+                Main page
+            </a>
+            <a href="{% url 'projects:project-list' %}" class="navbar-element" id="projects">
+                Projects
+            </a>
+            <a href="{% url 'contacts:contacts' %}" class="navbar-element" id="contacts">
+                Contacts
+            </a>
         </div>
-
-        <!-- {#        --------------Main section--------------------------#} -->
-        <div class="main-content">
-            {% block content %} {% endblock %}
+        <div class="sidebar">
+            <a href="https://github.com/Grister/web-portfolio" class="sidebar-element">
+                <img id="github"
+                     src="{% static '/icons/github-footer_dark.svg' %}"
+                     alt="github">
+            </a>
+            <img id="separator" class="separator"
+                 src="{% static '/icons/séparateur.png' %}"
+                 alt="separator">
+            <label id="theme-switch" class="switch sidebar-element">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
         </div>
+    </div>
 
-        <!-- {#        --------------Footer section--------------------------#} -->
-        <div class="footer">
-            <div class="footer-box">
-                <div class="footer-logo-box">
-                    <div class="grist-logo">[g]rist</div>
+    <!-- {#        --------------Main section--------------------------#} -->
+    <div class="main-content">
+        {% block content %} {% endblock %}
+    </div>
 
-                    <div class="copyright">
-                        <p class="p-copyright">
-                            © 2024 All Rights Reserved
-                        </p>
-                    </div>
+    <!-- {#        --------------Footer section--------------------------#} -->
+    <div class="footer">
+        <div class="footer-box">
+            <div class="footer-logo-box">
+                <div class="grist-logo">[g]rist</div>
+
+                <div class="copyright">
+                    <p class="p-copyright">
+                        © 2024 All Rights Reserved
+                    </p>
                 </div>
-                <p class="footer-text">
-                    Welcome to my personal website! Here you will find information about me,
-                    my projects and contact information to get in touch with me.
-                    You can also check out my portfolio and view my projects on GitHub.
-                    I look forward to hearing from you!
-                </p>
+            </div>
+            <p class="footer-text">
+                Welcome to my personal website! Here you will find information about me,
+                my projects and contact information to get in touch with me.
+                You can also check out my portfolio and view my projects on GitHub.
+                I look forward to hearing from you!
+            </p>
 
-                <div class="footer-links">
-                    <a href="mailto:example@example.com" class="footer-link">
-                        <img id="mail-footer" class="mail footer-icon"
-                            src=""
-                            alt="mail"></a>
-                    <a href="https://t.me/lewiscarroll" class="footer-link">
-                        <img id="telegram-footer" class="telegram footer-icon"
-                            src=""
-                            alt="telegram"></a>
-                    <a href="https://github.com/Grister/" class="footer-link">
-                        <img id="github-footer" class="github footer-icon"
-                            src=""
-                            alt="Github"></a>
-                    <a href="https://www.linkedin.com/in/grister/" class="footer-link">
-                        <img id="linkedin-footer" class="linkedin footer-icon"
-                            src=""
-                            alt="linkedin">
-                    </a>
-                </div>
+            <div class="footer-links">
+                <a href="mailto:example@example.com" class="footer-link">
+                    <img id="mail-footer" class="mail footer-icon"
+                         src=""
+                         alt="mail"></a>
+                <a href="https://t.me/lewiscarroll" class="footer-link">
+                    <img id="telegram-footer" class="telegram footer-icon"
+                         src=""
+                         alt="telegram"></a>
+                <a href="https://github.com/Grister/" class="footer-link">
+                    <img id="github-footer" class="github footer-icon"
+                         src=""
+                         alt="Github"></a>
+                <a href="https://www.linkedin.com/in/grister/" class="footer-link">
+                    <img id="linkedin-footer" class="linkedin footer-icon"
+                         src=""
+                         alt="linkedin">
+                </a>
             </div>
         </div>
     </div>
-    <script src="{% static '/js/theme-switch.js' %}"></script>
-    <script src="{% static '/js/links-settings.js' %}"></script>
+</div>
+<script src="{% static '/js/theme-switch.js' %}"></script>
+<script src="{% static '/js/links-settings.js' %}"></script>
 </body>
 
 </html>

@@ -53,10 +53,10 @@ function setFooterIcon(iconId, theme) {
     let imagePath;
     switch(theme) {
         case 'light':
-            imagePath = "static/icons/" + iconId + "_dark.svg";
+            imagePath = staticURL + iconId + "_dark.svg";
             break;
         case 'dark':
-            imagePath = "static/icons/" + iconId + "_white.svg";
+            imagePath = staticURL + iconId + "_white.svg";
             break;
         default:
             return;

@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #F0F0F070;
+    background: #F0F0F040;
     max-width: 65%;
     margin: 1.5%;
     padding: 1% 3%;
@@ -48,6 +48,10 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.card-title:hover {
+    color: #808080;
 }
 
 .side-skills {
