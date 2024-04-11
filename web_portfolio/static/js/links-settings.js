@@ -38,3 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('activeNavItem', `#${mainPageNavItem.id}`);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contact = document.querySelector('.contact-me-button');
+    const page = document.querySelector('#contacts');
+    const navItems = document.querySelectorAll('.navbar-element');
+
+    contact.addEventListener('click', (event) => {
+        // Удаление класса active у всех элементов навигации
+        navItems.forEach(navItem => {
+            navItem.classList.remove('active');
+        });
+
+        page.classList.add('active');
+        localStorage.setItem('activeNavItem', `#${page.id}`);
+    });
+});
