@@ -1,7 +1,8 @@
 from django.views.generic import TemplateView
 
+from common.views import TitleMixin
 
-# Create your views here.
-class ContactsView(TemplateView):
+
+class ContactsView(TitleMixin, TemplateView):
     template_name = 'contacts/contacts.html'
     title = "Contact me"
