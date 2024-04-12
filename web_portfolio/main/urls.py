@@ -5,6 +5,6 @@ from main import views
 app_name = 'main'
 
 urlpatterns = [
-    path("", views.UserListAPIView.as_view(), name="short_index"),
-    path("index/", views.UserListAPIView.as_view(), name="index"),
+    path('', views.IndexView.as_view(), name='short_index'),
+    path('index/', views.IndexView.as_view(), name='index'),
 ]

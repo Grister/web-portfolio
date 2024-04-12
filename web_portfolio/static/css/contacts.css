@@ -1,0 +1,54 @@
+.title {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 55px;
+    color: #808080;
+    margin: 2%;
+    text-align: center;
+}
+
+.main-content {
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    max-width: 40%;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    background: #F0F0F070;
+    margin: 2%;
+    padding: 1% 5% 1% 10%;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow-set);
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Добавляем тень при наведении */
+}
+
+.card-text {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-image {
+    width: auto;
+    height: 40px;
+    max-height: 40px;
+    margin: 3%;
+}

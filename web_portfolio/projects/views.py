@@ -2,16 +2,13 @@ from django.shortcuts import render
 from django.views.generic import ListView
 
 from projects.models import Project
+from common.views import TitleMixin
 
 
 # Create your views here.
-class ProjectListView(ListView):
+class ProjectListView(TitleMixin, ListView):
     model = Project
+    title = 'Projects'
     context_object_name = 'projects'
-    template_name = 'products/products.html'
-    paginate_by = 3
-
-
-# class IndexView(TitleMixin, TemplateView):
-#     template_name = 'products/index.html'
-#     title = 'Store'
+    template_name = 'projects/projects.html'
+    paginate_by = 4
