@@ -25,9 +25,9 @@ The website is developed using Django, HTML, CSS and JavaScript.
 
 ## Installation Requirements
 
-`Python 3.x`
+`Python 3.12.x`
 
-`Django 3.x.`
+`Django 5.0.4`
 
 ## Installation and startup
 
