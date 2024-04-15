@@ -16,8 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    max-width: 40%;
+    min-width: 40%;
 }
 
 .card {
@@ -25,7 +24,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 70%;
+    width: 80%;
+    height: 70px;
+    max-height: 20vw;
     background: #F0F0F070;
     margin: 2%;
     padding: 1% 5% 1% 10%;
@@ -48,7 +49,17 @@
 
 .card-image {
     width: auto;
-    height: 40px;
+    height: 5vw;
     max-height: 40px;
     margin: 3%;
+}
+
+@media (max-width: 700px) {
+    .title {
+        font-size: 7vw;
+    }
+    .card-text {
+        font-size: 4vw;
+        overflow: hidden;
+    }
 }

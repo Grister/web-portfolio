@@ -2,6 +2,7 @@
 
 :root {
     --background-image-url: url("../images/main-page-LightV.png");
+    --background-color: #F0F0F0;
     --footer-color: #ffffff;
     --footer-logo-color: #000000;
     --card-shadow-set: 18px 18px 30px #d1d9e6a3;
@@ -16,6 +17,7 @@ body {
     background-image: var(--background-image-url);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -47,6 +49,68 @@ body {
     font-size: 17px;
     align-items: center;
 }
+
+ /* Mobile button */
+
+.mobile-nav {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	padding-top: 10%;
+    background: rgba(200, 194, 171, 0.2);
+	transform: translateX(-100%);
+	transition: transform 0.5s;
+}
+
+.mobile-nav li {
+    display: flex;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 17px;
+    margin: 5%;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-nav.active {
+	transform: translateX(0);
+}
+
+.menu-btn {
+	width: 30px;
+	height: 30px;
+    display: none;
+    margin: auto 3%;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+    border-radius: 5px;
+	background-color: black;
+    transition: all 0.4s;
+    z-index:2;
+}
+
+
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  transform: translate(-4%, 225%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+  transform: translate(-4%, -225%) rotate(-45deg);
+}
+
 
 #g-logo {
     font-size: 35px;
@@ -152,12 +216,12 @@ body {
     border-radius: 50%;
 }
 
-input:checked+.slider {
+input:checked + .slider {
     border: 2px solid rgb(255, 255, 255);
 }
 
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(24px);
     -ms-transform: translateX(24px);
     transform: translateX(24px);
@@ -192,20 +256,21 @@ input:checked+.slider:before {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0% 10%;
+    margin: 0 10%;
 }
 
 .footer-text {
     font-family: Inter;
-    font-size: 15px;
+    font-size: 1.1vw;
     color: #808080;
     margin: 0 10%;
+    min-width: 40%;
     text-align: center;
 }
 
 .grist-logo {
     font-family: Inter;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -221,15 +286,38 @@ input:checked+.slider:before {
 
 .footer-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+.footer-link {
+    margin: 0 3%;
 }
 
 .footer-icon {
-    margin: 0 10px;
-    width: 25px;
+    width: 4vw;
     height: 25px;
 }
 
-.telegram {
-    height: 22px;
+@media (max-width: 700px) {
+    body {
+        background-size: contain;
+    }
+    .navbar {
+        height: 45px;
+    }
+    .text-navbar {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    .menu-btn {
+        display: flex;
+    }
+    .grist-logo {
+        font-size: 4vw;
+    }
+    .copyright {
+        font-size: 1vw;
+    }
 }
