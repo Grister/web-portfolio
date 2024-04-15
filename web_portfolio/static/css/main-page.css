@@ -14,21 +14,21 @@
 }
 
 .title {
-    font-size: 55px;
+    font-size: 3.5vw;
     color: #808080;
     margin: inherit;
     text-align: left;
 }
 
 .position {
-    font-size: 55px;
+    font-size: 3.5vw;
     color: var(--footer-logo-color);
     font-weight: bold;
     text-align: left;
 }
 
 .description {
-    font-size: 15px;
+    font-size: 1vw;
     color: #808080;
     width: 550px;
     text-align: left;
@@ -36,7 +36,7 @@
 
 .button-container {
     font-family: Inter;
-    font-size: 12px;
+    font-size: 1vw;
     font-weight: bold;
     margin-top: 3%;
 }
@@ -55,8 +55,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 44px;
+    width: 25%;
+    height: 3vw;
     border-radius: 10px;
     margin-right: 2%;
     margin-left: 2%;

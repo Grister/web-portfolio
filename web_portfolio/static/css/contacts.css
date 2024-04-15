@@ -24,8 +24,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 70%;
+    width: 80%;
     height: 70px;
+    max-height: 20vw;
     background: #F0F0F070;
     margin: 2%;
     padding: 1% 5% 1% 10%;
