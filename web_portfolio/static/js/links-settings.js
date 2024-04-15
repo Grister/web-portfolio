@@ -54,3 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('activeNavItem', `#${page.id}`);
     });
 });
+
+
+let menuNav = document.querySelector('.mobile-nav');
+let menuBtn = document.querySelector('.menu-btn');
+menuBtn.addEventListener('click', function(){
+	menuBtn.classList.toggle('active');
+	menuNav.classList.toggle('active');
+})
