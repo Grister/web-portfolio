@@ -270,7 +270,7 @@ input:checked + .slider:before {
 
 .grist-logo {
     font-family: Inter;
-    font-size: 4vw;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -279,7 +279,7 @@ input:checked + .slider:before {
 
 .copyright {
     font-family: Inter;
-    font-size: 1vw;
+    font-size: 12px;
     width: max-content;
     color: var(--footer-text-color)
 }
@@ -313,5 +313,11 @@ input:checked + .slider:before {
     }
     .menu-btn {
         display: flex;
+    }
+    .grist-logo {
+        font-size: 4vw;
+    }
+    .copyright {
+        font-size: 1vw;
     }
 }
