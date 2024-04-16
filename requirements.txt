@@ -9,3 +9,4 @@ gunicorn==21.2.0
 whitenoise==6.6.0
 dj_database_url==2.1.0
 psycopg2==2.9.9
+django_heroku==0.3.1
