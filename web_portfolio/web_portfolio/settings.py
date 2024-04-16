@@ -22,12 +22,12 @@ load_dotenv(dotenv_path=BASE_DIR / '.env.dev')
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 're0bj^@ws$0=_0@7vyq#-yrnh(bf=t%r)&a*-lb@p3pgd!pu5p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = ['peaceful-meadow-89058-16179916ba55.herokuapp.com']
 
 
 # Application definition
