@@ -25,7 +25,6 @@ urlpatterns = [
     path('', include('projects.urls', namespace='projects')),
     path('', include('main.urls', namespace='main')),
     path('', include('contacts.urls', namespace='contacts')),
-    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 if settings.DEBUG:
