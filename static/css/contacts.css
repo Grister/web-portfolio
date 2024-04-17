@@ -1,0 +1,65 @@
+.title {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 55px;
+    color: #808080;
+    margin: 2%;
+    text-align: center;
+}
+
+.main-content {
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40%;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    height: 70px;
+    max-height: 20vw;
+    background: #F0F0F070;
+    margin: 2%;
+    padding: 1% 5% 1% 10%;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow-set);
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Добавляем тень при наведении */
+}
+
+.card-text {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-image {
+    width: auto;
+    height: 5vw;
+    max-height: 40px;
+    margin: 3%;
+}
+
+@media (max-width: 700px) {
+    .title {
+        font-size: 7vw;
+    }
+    .card-text {
+        font-size: 4vw;
+        overflow: hidden;
+    }
+}

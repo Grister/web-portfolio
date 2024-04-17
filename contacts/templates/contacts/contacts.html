@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link href="{% static '/css/contacts.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">Contact me</h1>
+    <div class="main-block">
+
+        <a href="https://t.me/lewiscarroll" class="card" target="_blank">
+            <div class="card-text">
+                Telegram: @lewiscarroll
+            </div>
+            <img class="card-image"
+                 src="{% static '/icons/telegram-footer_dark.svg' %}"
+                 alt="card-image">
+        </a>
+        <a href="https://www.linkedin.com/in/grister/" class="card" target="_blank">
+            <div class="card-text">
+                LinkedIn: @grister
+            </div>
+            <img class="card-image"
+                 src="{% static '/icons/linkedin-footer_dark.svg' %}"
+                 alt="card-image">
+        </a>
+        <a href="https://github.com/Grister/" class="card" target="_blank">
+            <div class="card-text">
+                GitHub: @grister
+            </div>
+            <img class="card-image"
+                 src="{% static '/icons/github-footer_dark.svg' %}"
+                 alt="card-image">
+        </a>
+        <a href="mailto:example@example.com" class="card" target="_blank">
+            <div class="card-text">
+                Email: carroll.lewi@gmail.com
+            </div>
+            <img class="card-image"
+                 src="{% static '/icons/mail-footer_dark.svg' %}"
+                 alt="card-image">
+        </a>
+    </div>
+{% endblock %}

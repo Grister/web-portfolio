@@ -1,0 +1,120 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ title }}</title>
+
+    <script> const staticURL = "{% static '/icons' %}" + "/";</script>
+
+    <link href="{% static '/css/base.css' %}" rel="stylesheet">
+    {% block css %} {% endblock %}
+</head>
+
+
+<body>
+    <div class="container-center-horizontal">
+        <!-- {#        --------------Navbar flare--------------------------#} -->
+        <header class="navbar">
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="mobile-nav">
+              <ul>
+                <li><a href="{% url 'main:index' %}">Main page</a></li>
+                <li><a href="{% url 'projects:project-list' %}">Projects</a></li>
+                <li><a href="{% url 'contacts:contacts' %}">Contacts</a></li>
+              </ul>
+            </nav>
+            <nav class="text-navbar">
+                <a href="{% url 'main:index' %}" id="g-logo">
+                    [g]
+                </a>
+                <a href="{% url 'main:short_index' %}" class="navbar-element" id="main-page">
+                    Main page
+                </a>
+                <a href="{% url 'projects:project-list' %}" class="navbar-element" id="projects">
+                    Projects
+                </a>
+                <a href="{% url 'contacts:contacts' %}" class="navbar-element" id="contacts">
+                    Contacts
+                </a>
+            </nav>
+            <div class="sidebar">
+                <a href="https://github.com/Grister/web-portfolio" class="sidebar-element">
+                    <img id="github"
+                         src="{% static '/icons/github-footer_dark.svg' %}"
+                         alt="github">
+                </a>
+                <img id="separator" class="separator"
+                     src="{% static '/icons/séparateur.png' %}"
+                     alt="separator">
+                <label id="theme-switch" class="switch sidebar-element">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+
+        <!-- {#        --------------Main section--------------------------#} -->
+        <main class="main-content">
+            {% block content %} {% endblock %}
+        </main>
+
+        <!-- {#        --------------Footer section--------------------------#} -->
+        <footer class="footer">
+            <div class="footer-box">
+                <div class="footer-logo-box">
+                    <div class="grist-logo">[g]rist</div>
+
+                    <div class="copyright">
+                        <p class="p-copyright">
+                            © 2024 All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+
+                <p class="footer-text">
+                    Welcome to my personal website! Here you will find information about me,
+                    my projects and contact information to get in touch with me.
+                    You can also check out my portfolio and view my projects on GitHub.
+                    I look forward to hearing from you!
+                </p>
+
+                <div class="footer-links">
+                    <a href="mailto:example@example.com" class="footer-link" target="_blank">
+                        <img id="mail-footer" class="mail footer-icon"
+                             src=""
+                             alt="mail"></a>
+                    <a href="https://t.me/lewiscarroll" class="footer-link" target="_blank">
+                        <img id="telegram-footer" class="telegram footer-icon"
+                             src=""
+                             alt="telegram"></a>
+                    <a href="https://github.com/Grister/" class="footer-link" target="_blank">
+                        <img id="github-footer" class="github footer-icon"
+                             src=""
+                             alt="Github"></a>
+                    <a href="https://www.linkedin.com/in/grister/" class="footer-link" target="_blank">
+                        <img id="linkedin-footer" class="linkedin footer-icon"
+                             src=""
+                             alt="linkedin">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{% static '/js/theme-switch.js' %}"></script>
+    <script src="{% static '/js/links-settings.js' %}"></script>
+</body>
+
+</html>
