@@ -26,8 +26,10 @@ body {
 .container-center-horizontal {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding-top: 4%;
+    min-height: 100vh;
 }
 
 .navbar {
